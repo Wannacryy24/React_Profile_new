@@ -15,12 +15,12 @@ export default function Contact() {
           <p>
             <span>2</span>
             <span className='website-span'>website:</span>
-            <a href="https://mayankvermaportfolio.netlify.app/" target='_blank'>Portfolio.me</a>
+            <a href="https://myportfoliovscode.netlify.app/Home" target='_blank'>Portfolio.me</a>
           </p>
           <p>
             <span>3</span>
             <span className='website-span'>email:</span>
-            <a href="mailto:mayankverma.dev@gmail.com" target='_blank'>mayankverma.dev@gmail.com</a>
+            <a href="mailto:mayankverma.dev24@gmail.com" target='_blank'>mayankverma.dev24@gmail.com</a>
           </p>  
           <p>
             <span>4</span>
@@ -30,7 +30,7 @@ export default function Contact() {
           <p>
             <span>5</span>
             <span className='website-span'>linkedin:</span>
-            <a href="https://www.linkedin.com/in/mayank-verma-3b8b62318/" target='_blank'>Mayank Linkedin</a>
+            <a href="https://www.linkedin.com/in/" target='_blank'>Mayank Linkedin</a>
           </p>
           <p>
             <span>6</span>
