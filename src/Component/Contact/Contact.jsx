@@ -25,7 +25,7 @@ export default function Contact() {
           <p>
             <span>4</span>
             <span className='website-span'>github:</span>
-            <a href="https://github.com/" target='_blank'>mygithub profile</a>
+            <a href="https://github.com/Wannacryy24" target='_blank'>mygithub profile</a>
           </p>
           <p>
             <span>5</span>
