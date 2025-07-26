@@ -16,7 +16,8 @@ export default function TabNav() {
   const { clicked, setClicked, activeComponent, setActiveComponent } = useContext(ButtonContext);
 
   useEffect(()=>{
-    var x = localStorage.getItem('tab-clicked');
+    
+    var x = sessionStorage.getItem('tab-clicked');
     console.log('x',x);
     setActiveComponent(x);
   },[]);
@@ -24,7 +25,7 @@ export default function TabNav() {
   const handleButtonClick = (componentName) => {
     setActiveComponent(componentName);
     setClicked(!clicked);
-    localStorage.setItem('tab-clicked',componentName);
+    sessionStorage.setItem('tab-clicked',componentName);
     // navigate(`/${componentName}`);
     //isse nahi ho payega q ki humko nested component ko render karana hai link tag use karke
   };
