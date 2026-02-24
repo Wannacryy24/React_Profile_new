@@ -1,0 +1,109 @@
+.deal-card {
+  display: flex;
+  gap: 20px;
+  background-color: #1e1e1e;
+  border: 1px solid #2d2d2d;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: 0.2s ease;
+}
+
+.deal-card:hover {
+  border-color: #007acc;
+  transform: translateY(-2px);
+}
+
+.deal-image {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  background: #252526;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.deal-content {
+  flex: 1;
+}
+
+.deal-title {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.deal-description {
+  font-size: 14px;
+  color: #c5c5c5;
+  margin-bottom: 10px;
+}
+
+.deal-highlights {
+  font-size: 13px;
+  color: #9cdcfe;
+  margin-bottom: 15px;
+  padding-left: 18px;
+}
+
+.deal-highlights li {
+  margin-bottom: 4px;
+}
+
+.deal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.deal-price {
+  font-weight: bold;
+  color: #4ec9b0;
+}
+
+.deal-button {
+  background-color: #007acc;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 13px;
+  transition: 0.2s ease;
+}
+
+.deal-button:hover {
+  background-color: #005f9e;
+}
+
+/* AmazonLinks.css */
+
+.amazon-wrapper {
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* hides outer overflow */
+}
+
+.amazon-scroll-container {
+  height: 100%;
+  overflow-y: auto;  /* vertical scroll */
+  padding: 40px;
+}
+
+/* Optional: smooth scroll */
+.amazon-scroll-container {
+  scroll-behavior: smooth;
+}
+
+/* Optional: custom scrollbar (VS Code style) */
+.amazon-scroll-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.amazon-scroll-container::-webkit-scrollbar-thumb {
+  background: #3c3c3c;
+  border-radius: 4px;
+}
+
+.amazon-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #007acc;
+}
