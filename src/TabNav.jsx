@@ -11,21 +11,23 @@ import "./tabnav.css";
 import { ButtonContext } from "./ButtonContext";
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import PageNotFound from "./Component/PageNotFound/PageNotFound";
+import AmazonLinks from "./Component/AmazonLinks/AmazonLinks";
+
 
 export default function TabNav() {
   const { clicked, setClicked, activeComponent, setActiveComponent } = useContext(ButtonContext);
 
-  useEffect(()=>{
-    
+  useEffect(() => {
+
     var x = sessionStorage.getItem('tab-clicked');
-    console.log('x',x);
+    console.log('x', x);
     setActiveComponent(x);
-  },[]);
+  }, []);
 
   const handleButtonClick = (componentName) => {
     setActiveComponent(componentName);
     setClicked(!clicked);
-    sessionStorage.setItem('tab-clicked',componentName);
+    sessionStorage.setItem('tab-clicked', componentName);
     // navigate(`/${componentName}`);
     //isse nahi ho payega q ki humko nested component ko render karana hai link tag use karke
   };
@@ -38,15 +40,15 @@ export default function TabNav() {
             <div
               className={
                 activeComponent === "home"
-                ? "tabbed-really-clicked"
-                : "tabbed-clicked"
+                  ? "tabbed-really-clicked"
+                  : "tabbed-clicked"
               }
               onClick={() => handleButtonClick("home")}
             >
               <Image
                 src={"/react.svg"}
                 className={"tabbed-home-img tabbed-img"}
-                />
+              />
               <p className="tabbed-btn">Home.jsx</p>
             </div>
           </Link>
@@ -57,14 +59,14 @@ export default function TabNav() {
               onClick={() => handleButtonClick("about")}
               className={
                 activeComponent === "about"
-                ? "tabbed-really-clicked"
-                : "tabbed-clicked"
+                  ? "tabbed-really-clicked"
+                  : "tabbed-clicked"
               }
-              >
+            >
               <Image
                 src={"/html_icon.svg"}
                 className={"tabbed-about-img tabbed-img"}
-                />
+              />
               <p className="tabbed-btn">About.html</p>
             </div>
           </Link>
@@ -74,14 +76,14 @@ export default function TabNav() {
               onClick={() => handleButtonClick("contact")}
               className={
                 activeComponent === "contact"
-                ? "tabbed-really-clicked"
-                : "tabbed-clicked"
+                  ? "tabbed-really-clicked"
+                  : "tabbed-clicked"
               }
-              >
+            >
               <Image
                 src={"/css_icon.svg"}
                 className={"tabbed-contact-img tabbed-img"}
-                />
+              />
               <p className="tabbed-btn">Contact.css</p>
             </div>
           </Link>
@@ -93,14 +95,14 @@ export default function TabNav() {
               onClick={() => handleButtonClick("project")}
               className={
                 activeComponent === "project"
-                ? "tabbed-really-clicked"
-                : "tabbed-clicked"
+                  ? "tabbed-really-clicked"
+                  : "tabbed-clicked"
               }
-              >
+            >
               <Image
                 src={"/js_icon.svg"}
                 className={"tabbed-project-img tabbed-img"}
-                />
+              />
               <p className="tabbed-btn">Projcet.js</p>
             </div>
           </Link>
@@ -111,14 +113,14 @@ export default function TabNav() {
               onClick={() => handleButtonClick("articles")}
               className={
                 activeComponent === "articles"
-                ? "tabbed-really-clicked"
-                : "tabbed-clicked"
+                  ? "tabbed-really-clicked"
+                  : "tabbed-clicked"
               }
-              >
+            >
               <Image
                 src={"/json_icon.svg"}
                 className={"tabbed-articles-img tabbed-img"}
-                />
+              />
               <p className="tabbed-btn">Skills.json</p>
             </div>
           </Link>
@@ -129,27 +131,47 @@ export default function TabNav() {
               onClick={() => handleButtonClick("github")}
               className={
                 activeComponent === "github"
-                ? "tabbed-really-clicked"
-                : "tabbed-clicked"
+                  ? "tabbed-really-clicked"
+                  : "tabbed-clicked"
               }
-              >
+            >
               <Image
                 src={"/markdown_icon.svg"}
                 className={"tabbed-github-img tabbed-img"}
-                />
+              />
               <p className="tabbed-btn">Github.md</p>
             </div>
           </Link>
+
+          <Link to='/AmazonLinks' className="link-home-tab-nav">
+            <div
+              onClick={() => handleButtonClick("amazonlinks")}
+              className={
+                activeComponent === "amazonlinks"
+                  ? "tabbed-really-clicked"
+                  : "tabbed-clicked"
+              }
+            >
+              <Image
+                src={"/amazon_icon.svg"}
+                className={"tabbed-amazon-img tabbed-img"}
+              />
+              <p className="tabbed-btn">Amazon.links</p>
+            </div>
+          </Link>
+
+
         </div>
-        { 
+        {
           <Routes>
-            <Route path='/Home' element={<Home/>}/>
-            <Route path='/About' element={<About/>}/>
-            <Route path='/Contact' element={<Contact />}/>
-            <Route path='/Project' element={<Project />}/>
-            <Route path='/Articles' element={<Articles />}/>
-            <Route path='/Github' element={<Github />}/>
-            <Route path='*' element={<PageNotFound/>}/>
+            <Route path='/Home' element={<Home />} />
+            <Route path='/About' element={<About />} />
+            <Route path='/Contact' element={<Contact />} />
+            <Route path='/Project' element={<Project />} />
+            <Route path='/Articles' element={<Articles />} />
+            <Route path='/Github' element={<Github />} />
+            <Route path='/AmazonLinks' element={<AmazonLinks />} />
+            <Route path='*' element={<PageNotFound />} />
           </Routes>
         }
 
@@ -157,7 +179,7 @@ export default function TabNav() {
 
 
 
-        
+
         {/* {activeComponent === "home" && <Home />} */}
         {/* {activeComponent === "about" && <About />} */}
         {/* {activeComponent === "contact" && <Contact />} */}

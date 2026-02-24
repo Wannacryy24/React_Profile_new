@@ -41,7 +41,7 @@ export default function Aside() {
                 <Image src={'/github.svg'}/>
             </div>
 
-
+            
         </div>
 
 
