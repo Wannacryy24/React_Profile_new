@@ -144,7 +144,7 @@ export default function TabNav() {
             </div>
           </Link>
 
-          <Link to='/AmazonLinks' className="link-home-tab-nav">
+          <Link to='/deals' className="link-home-tab-nav">
             <div
               onClick={() => handleButtonClick("amazonlinks")}
               className={
@@ -171,7 +171,7 @@ export default function TabNav() {
             <Route path='/Project' element={<Project />} />
             <Route path='/Articles' element={<Articles />} />
             <Route path='/Github' element={<Github />} />
-            <Route path='/AmazonLinks' element={<AmazonLinks />} />
+            <Route path='/deals' element={<AmazonLinks />} />
             <Route path='/PrivacyPolicy' element={<PrivacyPolicy />} />
             <Route path='*' element={<PageNotFound />} />
           </Routes>
