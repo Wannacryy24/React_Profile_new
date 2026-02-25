@@ -3,11 +3,17 @@ export default function AmazonLinks() {
     return (
         <div className="amazon-wrapper">
             <div className="amazon-scroll-container">
-                <p className="intro-text">
+                <h2 style={{ fontSize: "60px", paddingBottom: "10px" }}>Developer Gear Deals</h2>
+                <p className="intro-text" style={{
+                    fontSize: "20px",
+                    paddingBottom: "10px"
+                }}>
                     As a frontend engineer working long coding hours, I’ve curated this list of tools and gear that improve comfort, productivity, and overall workspace efficiency. These are practical recommendations for developers building projects daily.
                 </p>
-                <h3>Developer Gear Deals</h3>
-                <p style={{ marginBottom: "30px", color: "#ccc" }}>
+                <p style={{
+                    marginBottom: "30px", color: "#ccc", fontSize: "20px",
+                    paddingBottom: "10px"
+                }}>
                     Disclosure: As an Amazon Associate, I earn from qualifying purchases. This helps support the site at no additional cost to you.
                 </p>
                 <DealCard

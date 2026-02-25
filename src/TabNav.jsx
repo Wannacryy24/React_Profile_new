@@ -12,6 +12,7 @@ import { ButtonContext } from "./ButtonContext";
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import PageNotFound from "./Component/PageNotFound/PageNotFound";
 import AmazonLinks from "./Component/AmazonLinks/AmazonLinks";
+import PrivacyPolicy from "./Component/PrivacyPolicy/PrivacyPolicy";
 
 
 export default function TabNav() {
@@ -171,6 +172,7 @@ export default function TabNav() {
             <Route path='/Articles' element={<Articles />} />
             <Route path='/Github' element={<Github />} />
             <Route path='/AmazonLinks' element={<AmazonLinks />} />
+            <Route path='/PrivacyPolicy' element={<PrivacyPolicy />} />
             <Route path='*' element={<PageNotFound />} />
           </Routes>
         }
