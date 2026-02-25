@@ -16,6 +16,21 @@ export default function AmazonLinks() {
                 }}>
                     Disclosure: As an Amazon Associate, I earn from qualifying purchases. This helps support the site at no additional cost to you.
                 </p>
+
+                <DealCard
+                    image="https://m.media-amazon.com/images/I/41Rql2Ck6EL.jpg"
+                    title="Bluetooth speaker"
+                    description="HP 360 Mono Portable Silver Bluetooth Speaker with Built-in Microphone Ip54 Dust and Water Resistance (2D801AA)"
+                    highlights={[
+                        "Portable design",
+                        "Connect far and wide using Bluetooth 5",
+                        "Equipped with convenient controls like power on and off",
+                    ]}
+                    price="₹631"
+                    link="https://amzn.to/40tGDnD"
+                />
+
+                
                 <DealCard
                     image="https://m.media-amazon.com/images/I/61ypCEs0XiL._SL1500_.jpg"
                     title="Redragon K673 PRO Mechanical Keyboard"
