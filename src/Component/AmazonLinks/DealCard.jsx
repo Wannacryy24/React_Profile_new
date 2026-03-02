@@ -24,7 +24,7 @@ export function DealCard({
         </ul>
 
         <div className="deal-footer">
-          <span className="deal-price">{price}</span>
+          <span className="deal-price">Rs : {price}</span>
 
           <a
             href={link}

@@ -13,6 +13,7 @@ import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import PageNotFound from "./Component/PageNotFound/PageNotFound";
 import AmazonLinks from "./Component/AmazonLinks/AmazonLinks";
 import PrivacyPolicy from "./Component/PrivacyPolicy/PrivacyPolicy";
+import { FillDeals } from "./Component/FillDeals";
 
 
 export default function TabNav() {
@@ -174,6 +175,7 @@ export default function TabNav() {
             <Route path='/deals' element={<AmazonLinks />} />
             <Route path='/PrivacyPolicy' element={<PrivacyPolicy />} />
             <Route path='*' element={<PageNotFound />} />
+            <Route path="/fillDeals" element={<FillDeals/>} />
           </Routes>
         }
 

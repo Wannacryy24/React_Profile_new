@@ -1,5 +1,8 @@
+import { useDeals } from "../../context/DealsContext";
 import { DealCard } from "./DealCard"
 export default function AmazonLinks() {
+    const { deals } = useDeals();
+
     return (
         <div className="amazon-wrapper">
             <div className="amazon-scroll-container">
@@ -26,11 +29,11 @@ export default function AmazonLinks() {
                         "Connect far and wide using Bluetooth 5",
                         "Equipped with convenient controls like power on and off",
                     ]}
-                    price="₹631"
+                    price="631"
                     link="https://amzn.to/40tGDnD"
                 />
 
-                
+
                 <DealCard
                     image="https://m.media-amazon.com/images/I/61ypCEs0XiL._SL1500_.jpg"
                     title="Redragon K673 PRO Mechanical Keyboard"
@@ -40,7 +43,7 @@ export default function AmazonLinks() {
                         "RGB backlighting",
                         "Durable build quality",
                     ]}
-                    price="₹4,739"
+                    price="4,739"
                     link="https://www.amazon.in/Redragon-K673-Mechanical-Dedicated-Absorbing/dp/B0CDX5XGLK/ref=sr_1_3?dib=eyJ2IjoiMSJ9.QcABAaxSCcm1PwzsaigoZ0HOLx5QH9RB0Qs5e240EDrGPe_rZEMhVCdI4F4ZFmldiQlDM-jnspkSKtVIUSFIJEe3Gvae3LsSFL6lEp0nPj4wgxLiNbVO05ejuG2Qu6OO4zmS6k-Qxahio_My5B2sSfGIeSZbiw736YBRCA-Z-jFBt86wXebXSbJM8ydbFsySwrdmbwVd2lUkLKfnwEBAYHTDqFa8F-55luXUQHzwt4A.aQcytmLJsSiLuX4WSV-RajHeCYW1aJ4CdhncIv51ogc&dib_tag=se&keywords=Mechanical%2BKeyboard&nsdOptOutParam=true&qid=1771959264&refinements=p_36%3A420000-&rnid=1318502031&sr=8-3&th=1"
                 />
 
@@ -66,7 +69,7 @@ export default function AmazonLinks() {
                         "Eye Care & 1-Hour Auto Shut-off Mode",
                         "Immersive RGB Backlight for Gaming Ambiance",
                     ]}
-                    price="₹1999"
+                    price="1999"
                     link="https://www.amazon.in/dp/B07DY9KTF6?aod=1&th=1&psc=1"
                 />
 
@@ -81,7 +84,7 @@ export default function AmazonLinks() {
                         "All Size",
                         "Durable",
                     ]}
-                    price="₹299"
+                    price="299"
                     link="https://www.amazon.in/Zebronics-NS1000-Featuring-Foldable-Anti-Slip-Adjustable/dp/B0C376RWQP/ref=sr_1_5?crid=IIXA9YBJEAKA&dib=eyJ2IjoiMSJ9.AG7ta29N20XhJwLp0Q9IbQ6OqxLNCTPkc4Lmuyij9k5q_xPh7zxXdI2mXigbYD_wccEEWpixtTuK6RfshI8wjQdzAkxtU5WVTnWpWqfzpqYOwEdGVtJtvL_h54LQeMBmOhTofhm3x37ru0jkxpg8Iu5y06aXYRnDcwzESVOKzuuHuT76p4Bs4w1u5KNj0KYZDvRPPpZwRmyXYi5ZGhKdz2XhQcaTbHafYQWOlXus-dM.KDumWImt1VWdpkxUydcndeBHm_uvAJTSOrOiYkwJ2Tw&dib_tag=se&keywords=Laptop%2BStand&qid=1771959729&sprefix=monitor%2Blight%2Bbar%2Caps%2C505&sr=8-5&th=1"
                 />
 
@@ -95,10 +98,9 @@ export default function AmazonLinks() {
                         "Comfortable",
                         "Egronomic design",
                     ]}
-                    price="₹1,499"
+                    price="1,499"
                     link="https://www.amazon.in/GOBOULT-Launched-Headphones-Bluetooth-Wireless/dp/B0FNN74DWP/ref=sr_1_3?crid=H3H64TLRYJ0G&dib=eyJ2IjoiMSJ9.M2RMPwosuynYNQ1wIQA98K-rciRuU7JhCETwMtgWGEY2jWi3dDLKH8G1swf38D-Un_VY7PYtvzAkuAW7h1CcOruggFsceN2A8MRiccYpopl1i4UtWVkINRChHeVirM7dI8CQYWG6PB9PtmhmJ1Cr0E6XCmnGewhE8uhFMx3xXI-fV5O__5kV0uupBL3cP4ryndSiThBAeT_7cIVn-ZnJ3yfG6QAISC4y3Wl6394jQ-k.vZ45SmZZYYfamd-XF7pNEFONAlBUy23nbknmDU_ADiA&dib_tag=se&keywords=Headphones&qid=1771959865&sprefix=laptop%2Bstand%2Caps%2C401&sr=8-3&th=1"
                 />
-
 
                 <DealCard
                     image="https://m.media-amazon.com/images/I/61q7GuSnqDL._SL1500_.jpg"
@@ -109,10 +111,21 @@ export default function AmazonLinks() {
                         "Chip availavle",
                         "Different Modes",
                     ]}
-                    price="₹20"
+                    price="20"
                     link="https://www.amazon.in/Zebronics-Auto-White-Balance-Auto-Exposure-FaceTime/dp/B0FLXPZ77B/ref=sr_1_4?crid=39QQTDP42WVH1&dib=eyJ2IjoiMSJ9.EW-f2H9-Qthlja8X39cmG5d9VqmypcIuEr_fR9rwj-mJMcpkfSO3Tmgcs3eKsnn7J9CibVriDnmjW1fqHXpjfk5-0_CD2DwT0veBf35qOpkN-wJv70w2-kHZHM-r6T4JEDr9Unvyj2sLzzbxCjTqstLQGYdRLI8wFJZb6TeCqUOlNCcWdQNcprqFC8J8p-B218gmDLpfluXsDCWcmxWWdv-g0Q1zEd-ho9pdAJ3VLFQ.LjUswMgxo-a7v3lV-Z6R9i4E1vDqxjw0-nqyTzpUE6M&dib_tag=se&keywords=Webcams&qid=1771960005&sprefix=webcams%2Caps%2C427&sr=8-4"
                 />
 
+                {deals.map((deal) => (
+                    <DealCard
+                        key={deal.link}
+                        image={deal.image}
+                        title={deal.title}
+                        description={deal.description}
+                        highlights={deal.highlights}
+                        price={deal.price}
+                        link={deal.link}
+                    />
+                ))}
             </div>
         </div>
     );
