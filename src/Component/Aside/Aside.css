@@ -15,20 +15,20 @@ aside{
     justify-content: center;
 }
 
-.copy-div , .github-div ,.fragmented-div ,.pen-div ,.mail-div,.user-aside-div,.setting-aside-div{
+.copy-div , .github-div ,.fragmented-div ,.pen-div ,.mail-div,.user-aside-div,.setting-aside-div,.explorer-div{
     display: flex;
     justify-content: center;
     height: 7vh;
     width: 100%;
 }
 
-.copy-div , .github-div ,.fragmented-div ,.pen-div ,.mail-div,.user-aside-div,.setting-aside-div:hover{
+.copy-div , .github-div ,.fragmented-div ,.pen-div ,.mail-div,.user-aside-div,.setting-aside-div,.explorer-div:hover{
     background-color: #24292E;
     cursor: pointer;
 }
 
 
-.copy-div-active , .mail-div-active , .fragmented-div-active , .pen-div-active , .github-div-active , .fragmented-div-active{
+.copy-div-active , .mail-div-active , .fragmented-div-active , .pen-div-active , .github-div-active , .fragmented-div-active,.explorer-div-active{
     background-color: #313131;
     height: 7vh;
     width: 100%;
@@ -45,16 +45,15 @@ aside{
 }
 
 
-
-
-
-
-
-
-
 @media (max-width:768px){
  aside{
     display: none;
     /* width: 12vw; */
  }
+}
+
+.custom-icon {
+  svg {
+    fill: rgb(93, 93, 93); 
+  }
 }
