@@ -6,7 +6,7 @@ import { ButtonContext } from '../../ButtonContext';
 import { FileAddOutlined, FolderAddOutlined } from '@ant-design/icons';
 
 export default function Explorer() {
-  const [showPortfolio, setShowPortfolio] = useState(false);
+  const [showPortfolio, setShowPortfolio] = useState(true);
   const navigate = useNavigate();
   const { activeComponent, setActiveComponent } = useContext(ButtonContext);
   const filesRef = useRef(null);
@@ -22,27 +22,27 @@ export default function Explorer() {
   };
 
   useEffect(() => {
-    const el = filesRef.current;
-    if (!el) return;
+  const el = filesRef.current;
+  if (!el) return;
 
-    if (!showPortfolio) {
-      // OPEN
-      el.style.height = el.scrollHeight + "px";
+  if (showPortfolio) {
+    // ✅ OPEN
+    el.style.height = el.scrollHeight + "px";
 
-      const timer = setTimeout(() => {
-        el.style.height = "auto";
-      }, 250);
+    const timer = setTimeout(() => {
+      el.style.height = "auto";
+    }, 250);
 
-      return () => clearTimeout(timer);
-    } else {
-      // CLOSE
-      el.style.height = el.scrollHeight + "px";
+    return () => clearTimeout(timer);
+  } else {
+    // ✅ CLOSE
+    el.style.height = el.scrollHeight + "px";
 
-      requestAnimationFrame(() => {
-        el.style.height = "0px";
-      });
-    }
-  }, [showPortfolio]);
+    requestAnimationFrame(() => {
+      el.style.height = "0px";
+    });
+  }
+}, [showPortfolio]);
 
   // ✅ INITIAL OPEN STATE
   useEffect(() => {
