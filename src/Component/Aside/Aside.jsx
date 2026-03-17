@@ -58,7 +58,14 @@ export default function Aside() {
 
   const handleClickbtn = useCallback((e) => {
     const selectedComponent = e.currentTarget.getAttribute('data-value');
-    if (selectedComponent && selectedComponent !== activeComponent) {
+
+    if (!selectedComponent) return;
+
+    if (selectedComponent === activeComponent) {
+      // 🔥 SAME CLICK → CLOSE
+      setActiveComponent(null);
+    } else {
+      // 🔥 DIFFERENT CLICK → OPEN
       setActiveComponent(selectedComponent);
       navigate(selectedComponent);
     }

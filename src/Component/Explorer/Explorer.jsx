@@ -21,7 +21,6 @@ export default function Explorer() {
     navigate(selectedComponent);
   };
 
-  // ✅ HEIGHT ANIMATION (VS CODE STYLE)
   useEffect(() => {
     const el = filesRef.current;
     if (!el) return;
@@ -53,10 +52,10 @@ export default function Explorer() {
     }
   }, []);
 
+  
   return (
     <div className='explorer-Div'>
-      <p className='explorer'>EXPLORER</p>
-
+      <div className='explorer'>EXPLORER</div>
       <div className='explorer-portfolio-div' onClick={handlePortfolio}>
         <Image
           src={'/down.svg'}

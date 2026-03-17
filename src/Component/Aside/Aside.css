@@ -90,3 +90,13 @@ aside {
     display: none;
   }
 }
+
+aside {
+  width: 3.5rem;
+  background-color: #1F2428;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border-right: 1px solid #161A1D;
+}
